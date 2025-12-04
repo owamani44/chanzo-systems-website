@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 export default function BusinessWebsite() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const logo = require('./Assets/csys.png');
+  //const api = require('./Assets/api.png');
+  //const ent = require('./Assets/enterprise.webp');
+  //const sftw = require('./Assets/sli2.jpg');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +22,9 @@ export default function BusinessWebsite() {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo Placeholder */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-blue-200 rounded-full" />
+            <img className="w-20 h-20 bg-none-200 rounded-full" 
+              src={logo} alt="Chanzo Systems Logo" />
+
             <h1 className="text-2xl font-bold text-blue-800">Chanzo Systems</h1>
           </div>
 
@@ -42,8 +48,12 @@ export default function BusinessWebsite() {
             Empowering Uganda Through Modern Technology
           </motion.h2>
           <p className="text-xl leading-relaxed text-gray-700">
-            Chanzo Systems specializes in API development, enterprise systems, and custom software
-            solutions built for the Ugandan market — delivering performance, reliability, and real business growth.
+          Chanzo Systems is dedicated to accelerating digital transformation across Uganda.
+          We design and develop custom software, enterprise systems, and fully tailored APIs 
+          that solve real operational challenges for local organizations.
+          Our solutions are built with performance, security, and reliability at their core — helping 
+          businesses automate processes, improve decision-making, and scale with confidence in a modern, 
+          connected economy.
           </p>
         </div>
       </section>
@@ -80,15 +90,18 @@ export default function BusinessWebsite() {
             {
               title: "API Development",
               icon: "🔌",
+             // image: api,
               desc: "Secure and scalable APIs that power digital ecosystems.",
             },
             {
               title: "Enterprise Systems",
+              //image: ent,
               icon: "🏢",
               desc: "Automated systems that improve efficiency and workflow.",
             },
             {
               title: "Custom Software Solutions",
+              //image: sftw,
               icon: "💻",
               desc: "Software built for the unique needs of Ugandan businesses.",
             },
@@ -111,16 +124,19 @@ export default function BusinessWebsite() {
       {/* Get in Touch */}
       <section id="contact" className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-3xl text-center">
-          <h3 className="text-4xl font-bold mb-6 text-blue-900">Get in Touch</h3>
+          <h3 className="text-4xl font-bold mb-6 text-blue-900">About Us</h3>
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Our mission is to deliver modern, reliable, and scalable technology. Our vision is to
-            become the leading software innovation partner.
+            Our mission is to build secure, scalable, and innovative software solutions tailored to
+             customer's needs — helping organizations operate smarter, grow faster, and compete with confidence
+              in a digital world. 
+              Our vision is to drive technological evolution by delivering world-class
+               digital solutions that empower businesses and transform industries.
           </p>
 
           <div className="bg-blue-50 p-10 rounded-2xl shadow-lg text-left">
             <h4 className="text-2xl font-semibold mb-4 text-center text-blue-800">Contact Details</h4>
             <p className="mb-2"><strong>Email:</strong> info@chanzosystems.com</p>
-            <p className="mb-2"><strong>Phone:</strong> +256 700 000 000</p>
+            <p className="mb-2"><strong>Phone:</strong> +256 745012004</p>
             <p className="mb-6"><strong>Location:</strong> Kampala, Uganda</p>
 
             {submitted ? (
