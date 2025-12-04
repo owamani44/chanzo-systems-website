@@ -135,7 +135,7 @@ export default function BusinessWebsite() {
 
           <div className="bg-blue-50 p-10 rounded-2xl shadow-lg text-left">
             <h4 className="text-2xl font-semibold mb-4 text-center text-blue-800">Contact Details</h4>
-            <p className="mb-2"><strong>Email:</strong> info@chanzosystems.com</p>
+            <p className="mb-2"><strong>Email:</strong> chanzo.ug@gmail.com</p>
             <p className="mb-2"><strong>Phone:</strong> +256 745012004</p>
             <p className="mb-6"><strong>Location:</strong> Kampala, Uganda</p>
 
