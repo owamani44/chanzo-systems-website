@@ -142,7 +142,9 @@ export default function BusinessWebsite() {
             {submitted ? (
               <p className="text-green-600 font-semibold text-center">Message Sent Successfully!</p>
             ) : (
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form action="https://formspree.io/f/mabcdxyz"
+                    method="POST"
+                    className="space-y-4" onSubmit={handleSubmit}>
                 <input
                   type="text"
                   placeholder="Your Name"
