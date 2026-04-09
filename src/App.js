@@ -1,11 +1,10 @@
 
 import './App.css';
-import BusinessWebsite from './BusinessWebsite';
-
+import Chanzo from './Chanzo';
 function App() {
   return (
     
-    <BusinessWebsite />
+    <Chanzo/>
   );
 }
 
