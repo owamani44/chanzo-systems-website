@@ -1,30 +1,38 @@
-import "./navbar.css";
+import './navbar.css';
+import { NavLink } from 'react-router-dom';
+import logo from '../Assets/c.png';
 
- const logo = require('../Assets/chanzo.png');
+const navItems = [
+  { path: '/', label: 'Home', end: true },
+  { path: '/services', label: 'Services' },
+  { path: '/contact', label: 'Get in touch' },
+];
 
 const Navbar = () => {
   return (
     <nav className="nav-container" aria-label="Main navigation">
-        <div className="wrapper">
-        <header className="nav">
-         
-          <div className="logo">
-            <img className="image" 
-              src={logo} alt="Chanzo Systems Logo" />
+      <div className="nav-wrapper">
+        <NavLink to="/" className="brand" aria-label="Chanzo Systems Home">
+          <img className="brand-logo" src={logo} alt="Chanzo Systems logo" />
+          <span className="brand-name">Chanzo Systems</span>
+        </NavLink>
 
-            <h1 className="header">Chanzo Systems</h1>
-          </div>
-            <div className="page-links">
-          <ul className="nav-links">
-            <li><a href="#home" className="link">Home</a></li>
-            <li><a href="#services" className="link">Services</a></li>
-            <li><a href="#contact" className="link">Get in touch</a></li>
-          </ul>
-       </div>
-      </header>
+        <ul className="nav-links">
+          {navItems.map((item) => (
+            <li key={item.path}>
+              <NavLink
+                to={item.path}
+                end={item.end}
+                className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
