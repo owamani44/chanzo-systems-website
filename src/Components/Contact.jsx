@@ -41,7 +41,7 @@ const Contact = () => {
             {submitted ? (
               <p className="success-message">Message Sent Successfully!</p>
             ) : (
-              <form className="form" onSubmit={handleSubmit}>
+              <form className="form" onSubmit={handleSubmit} netlify>
                 <input
                   type="text"
                   placeholder="Your Name"
