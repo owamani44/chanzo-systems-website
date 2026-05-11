@@ -1,21 +1,25 @@
 
 import Navbar from "./Components/Navbar";
 import "./chanzo.css";
-import teamBg from "./Assets/team.jpg";
+import teamBg from "./Assets/cbg4.jpg";
 import Footer from "./Components/Footer";
 
 export default function Chanzo() {
  
   return (
-    <div className="chanzo-page">
+    <div className="chanzo-page"
+     style={{
+          backgroundImage: `url(${teamBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+    >
       
       <Navbar/> 
 
       <div
         className="container1"
-        style={{
-          backgroundImage: `url(${teamBg})`,
-        }}
       >
         <div className="home-section1 intro-section">
           <h2>
@@ -47,12 +51,7 @@ export default function Chanzo() {
           </div>
         </div>
       </div>
-
-     
-
-      {/* Get in Touch */}
       
-
       <Footer/>
     </div>
   );

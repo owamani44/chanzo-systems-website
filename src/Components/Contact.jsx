@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import './contact.css';
 import Footer from './Footer';
+import teamBg from "../Assets/cbg4.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -14,7 +15,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact-page"
+    style={{
+          backgroundImage: `url(${teamBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+    >
       <Navbar />
       <main className="contact-container">
         <div className="contact-content">

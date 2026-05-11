@@ -3,8 +3,8 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  background: #0171b0;
-  border-bottom: 1px solid #c8deef;
+  background: transparent;
+  border-bottom: 1px solid transparent;
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
 }
 
@@ -60,14 +60,16 @@
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
-  border-radius: 8px;
+  margin: 10px;
+  border-radius: 0px;
   padding: 11px 14px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background-color: #0096f0;
+  background:transparent;
+  border-bottom: white 2px solid;
 }
 
 @media (max-width: 900px) {

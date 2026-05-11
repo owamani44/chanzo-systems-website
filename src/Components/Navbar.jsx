@@ -4,7 +4,7 @@ import logo from '../Assets/c.png';
 
 const navItems = [
   { path: '/', label: 'Home', end: true },
-  { path: '/services', label: 'Services' },
+  { path: '/services', label: 'What we do' },
   { path: '/contact', label: 'Get in touch' },
 ];
 
